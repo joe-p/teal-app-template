@@ -46,7 +46,7 @@ info:
 
 debug-create:
 	${SANDBOX} copyTo ${APPROVAL}
-	eval "#{APP_CREATE} --dryrun-dump --out ./create_dr.msgp"
+	eval "${APP_CREATE} --dryrun-dump --out ./create_dr.msgp"
 	${SANDBOX} tealdbg debug ${APPROVAL} -d create_dr.msgp --listen 0.0.0.0
 
 debug-call:
